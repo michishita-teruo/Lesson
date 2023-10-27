@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    vertical-align: bottom;
+    box-sizing: border-box;
+}
+
+
+/* レイアウト */
+
+
+.gallery {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.items {
+    width: 100%;
+}
+
+.items img {
+    width: 100%;
+}
+
+/* ローディング */
+
+.loading {
+    width: 100%;
+    height: 100vh;
+    transition: all 2s;
+    background-color: skyblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.loaded {
+opacity: 0;
+visibility: hidden;
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    margin: 200px auto;
+    background-color: #fff;
+    border-radius: 100%;
+    animation: scaleOut 1.0s infinite ease-in-out;
+}
+
+@keyframes scaleOut {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1.0);
+        opacity: 0;
+    }
+}
